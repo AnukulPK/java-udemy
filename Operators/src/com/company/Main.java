@@ -11,7 +11,7 @@ public class Main {
         result = result -1;
         System.out.println("result= "+result);
         result = result%2;
-        System.out.println("result%= "+result);
+        System.out.println("result%= "+result); 
 
     }
 }
