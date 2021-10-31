@@ -6,11 +6,11 @@ public class Main {
     }
 
     public static int calculateHighScorePosition(int playerScore){
-        if(playerScore>1000){
+        if(playerScore>=1000){
             return 1;
-        }else if(playerScore>500 && playerScore<1000){
+        }else if(playerScore>=500 && playerScore<1000){
             return 2;
-        }else if(playerScore>100 && playerScore<500){
+        }else if(playerScore>=100 && playerScore<500){
             return 3;
         }
         return 4;
@@ -22,11 +22,12 @@ public class Main {
         int position2 = calculateHighScorePosition(900);
         int position3 = calculateHighScorePosition(400);
         int position4 = calculateHighScorePosition(50);
+        int position5 = calculateHighScorePosition(1000);
         displayHighScorePosition("Anukul",position1);
         displayHighScorePosition("Bhagya",position2);
         displayHighScorePosition("Leena",position3);
         displayHighScorePosition("Krishnakumar",position4);
-
+        displayHighScorePosition("Sujay",position5);
 
     }
 
