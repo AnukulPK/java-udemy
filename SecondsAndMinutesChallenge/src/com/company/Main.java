@@ -1,6 +1,7 @@
 package com.company;
 
 public class Main {
+    private static final String INVALID_VALUE_MESSAGE="Invalid Value";
 
     public static void main(String[] args) {
 	// write your code here
@@ -10,7 +11,7 @@ public class Main {
 
     private static String getDurationString(long minutes, long seconds){
        if((minutes<0) || (seconds<0) || (seconds>60)){
-           return "Invalid value";
+           return INVALID_VALUE_MESSAGE;
        }
 
        long hours = minutes/60;
@@ -36,7 +37,7 @@ public class Main {
 
     private static String getDurationString(long seconds){
         if(seconds<0){
-            return "Invalid value";
+            return INVALID_VALUE_MESSAGE;
         }
 
         long minutes = seconds/60;
