@@ -15,26 +15,56 @@ public class Main {
 //            default:System.out.println("Was not 1 or 2");
 //            break;
 //        }
-        char letterToBeChecked='Z';
+//        char letterToBeChecked='Z';
+//
+//        switch (letterToBeChecked){
+//            case 'A':
+//                System.out.println("Letter A found");
+//                break;
+//            case 'B':
+//                System.out.println("Letter B Found");
+//                break;
+//            case 'C':
+//                System.out.println("Letter C Found");
+//                break;
+//            case 'D':
+//                System.out.println("Letter D Found");
+//                break;
+//            case 'E':
+//                System.out.println("Letter E Found");
+//                break;
+//            default:
+//                System.out.println("Letter not found");
+//                break;
+//        }
+        printDayOfTheWeek(1);
+    }
 
-        switch (letterToBeChecked){
-            case 'A':
-                System.out.println("Letter A found");
+    public static void printDayOfTheWeek(int day){
+        switch(day){
+            case 0:
+                System.out.println("Sunday");
                 break;
-            case 'B':
-                System.out.println("Letter B Found");
+            case 1:
+                System.out.println("Monday");
                 break;
-            case 'C':
-                System.out.println("Letter C Found");
+            case 2:
+                System.out.println("Tuesday");
                 break;
-            case 'D':
-                System.out.println("Letter D Found");
+            case 3:
+                System.out.println("Wednesday");
                 break;
-            case 'E':
-                System.out.println("Letter E Found");
+            case 4:
+                System.out.println("Thursday");
+                break;
+            case 5:
+                System.out.println("Friday");
+                break;
+            case 6:
+                System.out.println("Saturday");
                 break;
             default:
-                System.out.println("Letter not found");
+                System.out.println("Invalid day");
                 break;
         }
     }
