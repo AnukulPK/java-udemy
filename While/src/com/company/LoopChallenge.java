@@ -6,7 +6,7 @@ public class LoopChallenge {
     }
 
     public static int sumDigits(int number){
-        if(number<=10){
+        if(number<10){
             return -1;
         }
 
