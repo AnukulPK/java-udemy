@@ -4,11 +4,13 @@ import java.util.Scanner;
 
 public class Challenge {
     public static void main(String[] args) {
-        int count = 1;
+        int count = 0;
         int sum = 0;
         Scanner scanner = new Scanner(System.in);
-        while(count<=10){
-            System.out.println("Enter your number"+ count);
+
+        while(count<10){
+            int order = count+1;
+            System.out.println("Enter your number"+ order);
             boolean hasNextInt = scanner.hasNextInt();
 
             if(hasNextInt){
@@ -17,8 +19,8 @@ public class Challenge {
                 ++count;
             }else{
                 System.out.println("Enter a valid number");
-                break;
             }
+            scanner.nextLine();
 
         }
         System.out.println("Sum = "+sum);
