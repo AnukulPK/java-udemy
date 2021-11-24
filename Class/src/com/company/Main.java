@@ -7,7 +7,8 @@ public class Main {
         Car porche = new Car();
         Car holden = new Car();
 
-//        porche.model="Carrera";
+        porche.setModel("Carrera");
+        System.out.println("Model is " + porche.getModel());
 
     }
 }

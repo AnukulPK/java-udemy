@@ -7,7 +7,13 @@ public class Car {
     private String engine;
     private String colour;
 
+    public void setModel(String model){
+        this.model = model;
+    }
 
+    public String getModel(){
+        return this.model;
+    }
 
 
 }
