@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Locale;
+
 public class Car {
     private int doors;
     private int wheels;
@@ -8,7 +10,12 @@ public class Car {
     private String colour;
 
     public void setModel(String model){
-        this.model = model;
+        String validModel = model.toLowerCase();
+        if(validModel.equals("porche") || validModel.equals("holden")){
+            this.model = model;
+        }else{
+            this.model="Unknown";
+        }
     }
 
     public String getModel(){
