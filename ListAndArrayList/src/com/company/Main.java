@@ -47,4 +47,21 @@ public class Main {
         String newItem = scanner.nextLine();
         groceryList.modifyGroceryItem(itemNo-1,newItem);
     }
+
+    public static void removeItem(){
+        System.out.print("Enter item number: ");
+        int itemNo = scanner.nextInt();
+        scanner.nextLine();
+        groceryList.removeGroceryItem(itemNo-1);
+    }
+
+    public static void searchForItem(){
+        System.out.print("Enter item to search for: ");
+        String searchItem = scanner.nextLine();
+        if(groceryList.findItem(searchItem)!=null){
+            System.out.println("Found "+searchItem+" in ur grocery list");
+        }else{
+            System.out.println(searchItem+" not available in the shopping list");
+        }
+    }
 }
