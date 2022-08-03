@@ -26,6 +26,11 @@ public class Main {
 
         hawthorne.matchResult(fremantle,1,0);
 
+        System.out.println("Rankings");
+
+        System.out.println(hawthorne.getName()+": "+ hawthorne.ranking());
+
+        System.out.println(hawthorne.compareTo(fremantle));
 
 
     }
