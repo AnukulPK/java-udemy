@@ -9,6 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
+
         Scanner scanner = new Scanner(System.in);
 
         locations.put(0,new Location(0,"You are sitting in front of a computer learning Java"));
@@ -37,6 +38,13 @@ public class Main {
         locations.get(5).addExit("S",1);
         locations.get(5).addExit("W",2);
 //        locations.get(5).addExit("Q",0);
+        Map<String, String> vocabulary = new HashMap<String, String>();
+        vocabulary.put("QUIT","Q");
+        vocabulary.put("NORTH","N");
+        vocabulary.put("SOUTH","S");
+        vocabulary.put("EAST","E");
+        vocabulary.put("WEST","W");
+
         int loc =1;
 
         while (true){
@@ -53,6 +61,17 @@ public class Main {
             System.out.println();
 
             String direction = scanner.nextLine().toUpperCase();
+
+            if(direction.length()>1){
+                String[] words =direction.split(" ");
+                for(String word:words){
+                    if(vocabulary.containsKey(word)){
+                        direction=vocabulary.get(word);
+                        break;
+                    }
+                }
+            }
+
             if(exits.containsKey(direction)){
                 loc = exits.get(direction);
             }else{
