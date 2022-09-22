@@ -11,21 +11,21 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-     HeavenlyBody temp = new HeavenlyBody("Mercury",88);
-     solarSystem.put(temp.getName(),temp);
-     planets.add(temp);
+//     HeavenlyBody temp = new HeavenlyBody("Mercury",88);
+//     solarSystem.put(temp.getName(),temp);
+//     planets.add(temp);
 
-     temp = new HeavenlyBody("Venus",225);
-     solarSystem.put(temp.getName(),temp);
-     planets.add(temp);
+//     temp = new HeavenlyBody("Venus",225);
+//     solarSystem.put(temp.getName(),temp);
+//     planets.add(temp);
 
-     temp = new HeavenlyBody("Earth",365);
-     solarSystem.put(temp.getName(),temp);
-     planets.add(temp);
+//     temp = new HeavenlyBody("Earth",365);
+//     solarSystem.put(temp.getName(),temp);
+//     planets.add(temp);
 
-     HeavenlyBody tempMoon = new HeavenlyBody("Moon",27);
-     solarSystem.put(temp.getName(), tempMoon);
-     temp.addMoon(tempMoon);
+//     HeavenlyBody tempMoon = new HeavenlyBody("Moon",27);
+//     solarSystem.put(temp.getName(), tempMoon);
+//     temp.addMoon(tempMoon);
 
         System.out.println("Planets");
         for (HeavenlyBody planet:planets){
@@ -48,8 +48,8 @@ public class Main {
             System.out.println("\t"+moon.getName());
         }
 
-        HeavenlyBody pluto = new HeavenlyBody("Pluto",842);
-        planets.add(pluto);
+//        HeavenlyBody pluto = new HeavenlyBody("Pluto",842);
+//        planets.add(pluto);
 
         for(HeavenlyBody planet:planets){
             System.out.println(planet.getName()+": "+planet.getOrbitalPeriod());
