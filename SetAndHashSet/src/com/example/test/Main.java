@@ -11,20 +11,20 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-//     HeavenlyBody temp = new HeavenlyBody("Mercury",88);
-//     solarSystem.put(temp.getName(),temp);
-//     planets.add(temp);
+     HeavenlyBody temp = new Planet("Mercury",88);
+     solarSystem.put(temp.getName(),temp);
+     planets.add(temp);
 
-//     temp = new HeavenlyBody("Venus",225);
-//     solarSystem.put(temp.getName(),temp);
-//     planets.add(temp);
+     temp = new Planet("Venus",225);
+     solarSystem.put(temp.getName(),temp);
+     planets.add(temp);
 
-//     temp = new HeavenlyBody("Earth",365);
-//     solarSystem.put(temp.getName(),temp);
-//     planets.add(temp);
+     temp = new Planet("Earth",365);
+     solarSystem.put(temp.getName(),temp);
+     planets.add(temp);
 
-//     HeavenlyBody tempMoon = new HeavenlyBody("Moon",27);
-//     solarSystem.put(temp.getName(), tempMoon);
+     HeavenlyBody tempMoon = new Moon("Moon",27);
+     solarSystem.put(temp.getName(), tempMoon);
 //     temp.addMoon(tempMoon);
 
         System.out.println("Planets");
@@ -48,16 +48,26 @@ public class Main {
             System.out.println("\t"+moon.getName());
         }
 
-//        HeavenlyBody pluto = new HeavenlyBody("Pluto",842);
-//        planets.add(pluto);
+        HeavenlyBody pluto = new DwarfPlanet("Pluto",842);
+        planets.add(pluto);
 
         for(HeavenlyBody planet:planets){
-            System.out.println(planet.getName()+": "+planet.getOrbitalPeriod());
+            System.out.println(planet);
+//            System.out.println(planet.getName()+": "+planet.getOrbitalPeriod());
         }
 
         Object o = new Object();
         o.equals(o);
         "pluto".equals("");
 
+        HeavenlyBody earth1 = new Planet("Earth",365);
+        HeavenlyBody earth2 = new Planet("Earth",365);
+        System.out.println(earth1.equals(earth2));
+        System.out.println(earth2.equals(earth1));
+        System.out.println(earth1.equals(pluto));
+        System.out.println(pluto.equals(earth1));
     }
+
+
+
 }
