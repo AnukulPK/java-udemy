@@ -1,6 +1,6 @@
 package com.example.test;
 
-public class StockItem implements Comparable<StockItem{
+public class StockItem implements Comparable<StockItem>{
     private final String name;
     private double price;
     private int quantityStock = 0;
