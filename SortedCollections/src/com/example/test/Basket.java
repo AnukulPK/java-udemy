@@ -7,7 +7,7 @@ import java.util.TreeMap;
 
 public class Basket {
     private final String name;
-    private final Map<StockItem, Integer>list;
+    private final Map<StockItem, Integer> list;
 
     public Basket(String name) {
         this.name = name;
@@ -40,7 +40,11 @@ public class Basket {
         return 0;
     }
 
-    public Map<StockItem,Integer> items(){
+    public void clearBasket(){
+        this.list.clear();
+    }
+
+    public Map<StockItem,Integer> Items(){
         return Collections.unmodifiableMap(list);
     }
 
