@@ -59,24 +59,57 @@ public class Main {
 
 //        sellItem(anukulsBasket,"Car",1);
         sellItem(anukulsBasket,"Spanner",5);
-        System.out.println(anukulsBasket);
+//        System.out.println(anukulsBasket);
 
         sellItem(anukulsBasket,"Juice",4);
         sellItem(anukulsBasket,"Cup",12);
         sellItem(anukulsBasket,"Bread",1);
+//        System.out.println(anukulsBasket);
+//        System.out.println(stockList);
+
+        Basket basket = new Basket("customer");
+        sellItem(basket, "cup",100);
+        sellItem(basket, "juice",5);
+        removeItem(basket, "cup",1);
+        System.out.println(basket);
+
+        removeItem(anukulsBasket, "Car",1);
+        removeItem(anukulsBasket,"Cup",9);
+        removeItem(anukulsBasket,"Car",1);
+        System.out.println("Cars removed: " + removeItem(anukulsBasket,"Car",1)); //should not work
+
         System.out.println(anukulsBasket);
+
+        //Remove all Items from Tims Basket
+        removeItem(anukulsBasket,"Bread",1);
+        removeItem(anukulsBasket,"Cup",3);
+        removeItem(anukulsBasket,"Juice",4);
+        removeItem(anukulsBasket,"Cup",3);
+        System.out.println(anukulsBasket);
+        System.out.println("\nDisplay Stock list before and after checkout");
+        System.out.println(basket);
+        System.out.println(stockList);
+        checkout(basket);
+        System.out.println(basket);
         System.out.println(stockList);
 
 //        temp = new StockItem("Pen",1,12);
 //        stockList.Items().put(temp.getName(), temp);
 
-        stockList.Items().get("Car").adjustStock(2000);
-        stockList.get("Car").adjustStock(-1000);
-        System.out.println(stockList);
-        for(Map.Entry<String,Double> price:stockList.PriceList().entrySet()){
-            System.out.println(price.getKey()+" costs "+price.getValue());
+        StockItem car = stockList.Items().get("Car");
+        if(car!=null){
+            car.adjustStock(2000);
+        }
+        if(car!=null){
+            stockList.get("Car").adjustStock(-1000);
         }
 
+        System.out.println(stockList);
+//        for(Map.Entry<String,Double> price:stockList.PriceList().entrySet()){
+//            System.out.println(price.getKey()+" costs "+price.getValue());
+//        }
+    checkout(anukulsBasket);
+        System.out.println(anukulsBasket);
     }
 
     public static int sellItem(Basket basket, String item, int quantity){
