@@ -6,6 +6,7 @@
 
 <GridPane alignment="CENTER" xmlns:fx="http://javafx.com/fxml"
           fx:controller="com.example.events.HelloController">
-  <TextField GridPane.rowIndex="0" GridPane.columnIndex="0" fx:id="nameField"/>
-  <Button text="Say Hello" GridPane.rowIndex="1" GridPane.columnIndex="0" onAction="#onButtonClicked"/>
+  <TextField GridPane.rowIndex="0" GridPane.columnIndex="0" fx:id="nameField" onKeyReleased="#handleKeyReleased"/>
+  <Button fx:id="helloButton" text="Say Hello" GridPane.rowIndex="1" GridPane.columnIndex="0" onAction="#onButtonClicked"/>
+  <Button fx:id="byeButton" text="Say Bye" GridPane.rowIndex="1" GridPane.columnIndex="1" onAction="#onButtonClicked"/>
 </GridPane>
