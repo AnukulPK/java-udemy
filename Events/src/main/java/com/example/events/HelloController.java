@@ -3,6 +3,7 @@ package com.example.events;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 
 public class HelloController {
@@ -12,6 +13,8 @@ public class HelloController {
     private Button helloButton;
     @FXML
     private Button byeButton;
+    @FXML
+    private CheckBox ourCheckBox;
 
     @FXML
     public void initialize(){
@@ -26,6 +29,18 @@ public class HelloController {
         } else if (event.getSource().equals(byeButton)) {
             System.out.println("Bye, " + nameField.getText());
         }
+
+        try{
+            Thread.sleep(10000);
+        }catch (InterruptedException e){
+            // we don't care about this
+        }
+
+        if(ourCheckBox.isSelected()){
+            nameField.clear();
+            helloButton.setDisable(true);
+            byeButton.setDisable(true);
+        }
     }
 
     @FXML
@@ -34,5 +49,10 @@ public class HelloController {
         boolean disableButton = text.isEmpty() || text.trim().isEmpty();
         helloButton.setDisable(disableButton);
         byeButton.setDisable(disableButton);
+    }
+
+    @FXML
+    public void handleChange(){
+        System.out.println("The checkbox is " + (ourCheckBox.isSelected()?"checked":"not checked"));
     }
 }
