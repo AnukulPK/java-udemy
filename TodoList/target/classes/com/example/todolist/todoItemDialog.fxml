@@ -5,13 +5,15 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.DatePicker?>
 
-<BorderPane xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.todolist.DialogController">
+<?import javafx.scene.control.DialogPane?>
+<DialogPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.todolist.DialogController" prefWidth="800.0">
     <headerText>
         We could put instructions here
     </headerText>
+
     <content>
-        <GridPane vgap="10" hgap="10">
+        <GridPane vgap="10" hgap="10" prefWidth="800.0">
             <Label text="Short Description: " GridPane.rowIndex="0" GridPane.columnIndex="0"/>
             <TextField fx:id="shortDescriptionField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
             <Label text="Details: " GridPane.rowIndex="1" GridPane.columnIndex="0"/>
@@ -20,4 +22,4 @@
             <DatePicker fx:id="deadlinePicker" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
         </GridPane>
     </content>
-</BorderPane>
+</DialogPane>
