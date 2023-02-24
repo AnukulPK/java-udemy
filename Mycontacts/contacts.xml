@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contacts>
+<contact>
+	<first_name>Anukul</first_name>
+	<last_name>PK</last_name>
+	<phone_number>9999999999</phone_number>
+	<notes>Test</notes>
+</contact>
+<contact>
+	<first_name>Another</first_name>
+	<last_name>One</last_name>
+	<phone_number>9999999999</phone_number>
+	<notes>Test</notes>
+</contact>
+<contact>
+	<first_name>Bhagya</first_name>
+	<last_name>S</last_name>
+	<phone_number>9900990099</phone_number>
+	<notes>Test</notes>
+</contact>
+<contact>
+	<first_name>Leena</first_name>
+	<last_name>K</last_name>
+	<phone_number>1212121212</phone_number>
+	<notes>Hello</notes>
+</contact>
+<contact>
+	<first_name>Krishnakumar</first_name>
+	<last_name>P H</last_name>
+	<phone_number>1232456789</phone_number>
+	<notes>Another one</notes>
+</contact>
+</contacts>

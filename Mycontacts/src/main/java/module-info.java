@@ -5,5 +5,6 @@ module com.example.mycontacts {
 
 
     opens com.example.mycontacts to javafx.fxml;
+    opens com.example.mycontacts.datamodel;
     exports com.example.mycontacts;
 }
